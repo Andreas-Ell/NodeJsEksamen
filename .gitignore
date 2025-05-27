@@ -1,0 +1,16 @@
+# Node modules
+client/node_modules/
+server/node_modules/
+
+# Build output
+client/dist/
+client/.vite/
+
+# OS og editorfiler
+.DS_Store
+.vscode/
+*.log
+
+# Miljøfiler
+.env
+.env.local
