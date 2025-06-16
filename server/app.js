@@ -3,6 +3,7 @@ import cors from 'cors';
 import http from 'http';
 import { Server } from 'socket.io';
 import flightsRouter from './routers/flightsRouter.js'; 
+import bookingsRouter from './routers/bookingsRouter.js';
 
 const app = express();
 const PORT = 8080;
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/flights', flightsRouter); 
+app.use('/api/bookings', bookingsRouter);
 
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
