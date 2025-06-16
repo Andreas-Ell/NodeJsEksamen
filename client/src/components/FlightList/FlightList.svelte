@@ -1,5 +1,8 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   export let flights = [];
+
+  const dispatch = createEventDispatcher();
 
   async function bookFlight(flightId) {
     try {
@@ -10,13 +13,14 @@
       const data = await res.json();
 
       if (res.ok) {
-        alert(`✅ ${data.message}`);
+        alert(`${data.message}`);
+        dispatch('efterBooking'); 
       } else {
-        alert(`❌ ${data.error}`);
+        alert(`${data.error}`);
       }
     } catch (err) {
       console.error('Fejl ved booking:', err);
-      alert('⚠️ Der opstod en fejl ved booking.');
+      alert('Der opstod en fejl ved booking.');
     }
   }
 
@@ -31,7 +35,7 @@
   }
 </script>
 
-<h2>Flight departures.:</h2>
+<h2>Flight departures:</h2>
 
 {#if flights.length > 0}
   <ul>
@@ -39,7 +43,7 @@
       <li>
         ✈️ <strong>{flight.destination}</strong> –
         {formatDate(flight.departure_time)} –
-        {flight.seats} Seats
+        {flight.available_seats} Seats available
         <br />
         <em>{flight.description}</em>
         <br />
