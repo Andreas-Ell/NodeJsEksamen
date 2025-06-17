@@ -1,0 +1,55 @@
+.my-bookings {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.my-bookings h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.booking-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4faff;
+}
+
+.booking-info {
+  max-width: 70%;
+}
+
+.description {
+  color: #555;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.delete-btn {
+  padding: 0.4rem 0.8rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.error {
+  color: red;
+}
+
+.no-bookings {
+  font-style: italic;
+  color: #777;
+}

@@ -11,7 +11,6 @@ export async function getAllFlights(req, res) {
     `);
     res.json(rows);
   } catch (err) {
-    console.error('Fejl ved hentning af fly:', err);
-    res.status(500).json({ error: 'Serverfejl' });
+    res.status(500).json({ error: 'Network error' });
   }
 }

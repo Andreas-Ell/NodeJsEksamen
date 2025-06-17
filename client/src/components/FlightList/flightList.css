@@ -1,0 +1,60 @@
+.flight-list {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.flight-list h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.flight-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.flight-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fcff;
+}
+
+.flight-info {
+  max-width: 70%;
+}
+
+.description {
+  font-style: italic;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+.seats {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.book-btn {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #2980b9;
+}
+
+.no-flights {
+  color: #999;
+  font-style: italic;
+}

@@ -1,8 +1,11 @@
-import express from 'express';
-import { createBooking } from '../controllers/bookingsController.js';
+import { Router } from 'express';
+import { createBooking, getMyBookings, deleteBooking } from '../controllers/bookingsController.js';
+import { verifyToken } from '../middlewares/authMiddleware.js'; 
 
-const router = express.Router();
+const router = Router();
 
-router.post('/:flightId', createBooking);
+router.post('/:flightId', verifyToken, createBooking);
+router.get('/mine', verifyToken, getMyBookings);
+router.delete('/:bookingId', verifyToken, deleteBooking);
 
 export default router;
